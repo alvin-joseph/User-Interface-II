@@ -1,1 +1,276 @@
 /* Add CSS styling here */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/* border: 0; */
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: lightslategray;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    box-sizing:border-box;
+    max-width:100%;
+    border:1px solid gray;
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    font-size:1.6rem;
+    line-height: 1.5;
+    font-family: 'Blinker', sans-serif;
+}
+
+h1{
+    font-family: 'Ravi Prakash', cursive;
+    font-size:5rem;
+    padding:1%;
+}
+
+h2{
+    font-family: 'Ravi Prakash', cursive;
+    font-size:4rem;
+}
+a{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+header{
+    background-color:limegreen;
+}
+
+header nav{
+    display:flex;
+    padding:1%;
+}
+
+header nav a{
+    width:8%;
+    padding:.5%;
+    font-size:2.5rem;
+    text-decoration:none;
+    text-align:center;
+    border:2px solid black;
+    transition-duration: 0.4s;
+}
+
+header nav a:hover{
+    background-color:blue;
+    color:limegreen;
+}
+.top{
+    display:flex;
+}
+
+.top img{
+    padding:2%;
+}
+
+.top .my-info{
+    padding:2%;
+    width:40%;
+    display:flex;
+    flex-direction: column;
+    align-self:center;
+}
+
+.top .my-info h2{
+    padding:1%;
+}
+
+.top .my-info button a{
+    text-decoration: none;
+}
+.top .my-info button {
+    padding:2%;
+    width:30%;
+    font-size:2rem;
+    border-radius:5px;
+    border:1px solid black;
+    background-color: lightslategray;
+    transition-duration: 0.4s;
+}
+
+.top .my-info button a {
+    color:white;
+}
+
+.top .my-info button:hover{
+    background-color: black;
+    color:white;
+}
+.top .my-info p{
+    padding:4% 1% 2%;
+    font-size: 2rem;
+}
+
+.main .pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.main{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+footer{
+    background-color:limegreen;
+    padding:6%;
+    margin-top:2%;
+}
+
+footer h2 {
+    font-size: 5rem;
+    text-align: center;
+}
+
+footer nav{
+    margin:0 25%;
+    display:flex;
+    justify-content:space-evenly;
+    padding:1%;
+}
+
+footer nav button{
+    padding:3% 6%;
+    font-size: 2rem;
+    color:blue;
+    background-color: limegreen;
+    border:3px solid black;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+footer nav button a{
+    font-size: 2.5rem;
+}
+footer nav button a{
+    text-decoration: none;
+}
+
+footer nav button:hover{
+    background-color:blue;
+}
+
+footer nav button a:hover{
+    color:limegreen;
+}
+
+footer nav .home{
+    padding:0 8%;
+}
+
+/* Media Queries */
+
+@media(max-width:800px){
+    header{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        position:fixed;
+        background-color:rgba(50,205,50,0.8);
+        z-index: 999;
+        width:100%;
+    }
+    header nav{
+        justify-content: center;
+    }
+    header nav a{
+        width:12%;
+    }
+    .top{
+        flex-direction: column;
+    }
+    .top img {
+        padding-top: 22%;
+        width:90%;
+    }
+    .main-image{
+        display:flex;
+        justify-content: center;
+    }
+    .top .my-info{
+        width:100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .main .pics{
+        width:40%;
+        padding-bottom: 1%;
+    }
+    footer nav button{
+        padding:3% 13.3%;
+    }
+}
+
+
+@media(max-width: 500px){
+    header nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav a{
+        width:40%;
+    }
+    .top img {
+        padding-top: 60%;
+    }
+
+    footer nav {
+        display:flex;
+        justify-content:center;
+        width:100%;
+        margin:0 auto;
+    }
+
+    footer nav button a {
+        font-size: 2rem;
+    }
+
+    footer nav button{
+        padding:3% 13%;
+    }
+}
